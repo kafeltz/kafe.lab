@@ -1,4 +1,4 @@
-;(function ( $, window, document, undefined ) {
+    ;(function ( $, window, document, undefined ) {
 
     'use strict';
 
@@ -8,8 +8,9 @@
             selectOnFocus: false,
         };
 
-    var byPassKeys = [9, 16, 17, 18, 36, 37, 38, 39, 40, 91];
-
+    var numberKeys = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+    var numericPadKeys = [96, 97, 98, 99, 100, 101, 102, 103, 104, 105];
+    var byPassKeys = [8, 9, 16, 17, 18, 36, /*37, 38, 39, 40*/, 91 ].concat(numberKeys).concat(numericPadKeys);
 
     function Plugin( element, options )
     {
@@ -33,10 +34,10 @@
         {
             var value = event.which;
 
-            if(value >= 48 && value <= 57) {
+            if (numberKeys.indexOf(value) !== -1) {
                 self.value.push( value - 48 );
             }
-            else if (value >= 96 && value <= 105) {
+            else if (numericPadKeys.indexOf(value) !== -1) {
                 self.value.push( value - 96 );
             }
             else if (value === 8) {
@@ -47,10 +48,23 @@
                 self.value = [];
             }
 
-            render.call(self);
+                console.log( event.which );
+            if (checkValidKeys.call(self, event)) {
+                render.call(self);
+            }
 
-            return byPassKeys.indexOf(value) !== -1;
+            // prevent rendering...
+            return false;
         });
+    }
+
+    function checkValidKeys( event )
+    {
+        if (byPassKeys.indexOf( event.which ) !== -1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function render()

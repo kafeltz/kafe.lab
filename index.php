@@ -38,6 +38,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textar
 <h2>Money</h2>
 <input type="text" id="" value="0,00" data-select-on-focus placeholder="0,00" data-money-behavior>
 
+<p>&nbsp;</p>
 
 </body>
 </html>
