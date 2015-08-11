@@ -1,0 +1,20 @@
+{
+  "name": "kafe.lab",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kafeltz/kafe.lab",
+  "authors": [
+    "ismael <shalanga@gmail.com>"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}
