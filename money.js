@@ -21,6 +21,10 @@
         this._name     = pluginName;
 
         this.value = [];
+        
+        if (this.$element.attr("value") && this.$element.attr("value").length !== 0) {
+            this.value = this.$element.val().replace(/[^0-9]/g, "").split("");
+        }
 
         init.call(this);
     }
