@@ -1,0 +1,27 @@
+{
+  "name": "kafe.lab",
+  "version": "1.0.0",
+  "description": "aaa",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kafeltz/kafe.lab.git"
+  },
+  "keywords": [
+    "a",
+    "b",
+    "c"
+  ],
+  "author": "ismael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kafeltz/kafe.lab/issues"
+  },
+  "homepage": "https://github.com/kafeltz/kafe.lab",
+  "devDependencies": {
+    "bower": "^1.4.1"
+  }
+}
